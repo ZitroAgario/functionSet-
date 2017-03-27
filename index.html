@@ -1,14 +1,39 @@
 <script>
-  var target="1, 2, 3";
-function showHint(target, text, cot, bgc){
-	target23=target;
-	targetnew=target23.split(', '); 
+	var x1,x2
+function runsqrt(){
+	var v=document.getElementById('rozv');
+  var a=document.getElementById('first').value;
+  var b=document.getElementById('second').value;
+  var c=document.getElementById('third').value;
+  v.innerHTML+="Calculating...<br>"
+  var D=b*b-4*a*c;
+  v.innerHTML+="D = " + D + "<br>"
+  if(D>0){
+  x1=(-b+Math.sqrt(D))/(2*a)
+  x2=(-b-Math.sqrt(D))/(2*a)
+  v.innerHTML+="x<sub>1</sub> = " + x1 + ".<br>"
+  v.innerHTML+="x<sub>2</sub> = " + x2 + ".<br>"
+  }
+  else if(D==0){
+  x1=-b/(2*a)
+  x2=x1
+  v.innerHTML+="x<sub>1</sub> = " + x1 + ".<br>"
+  v.innerHTML+="x<sub>2</sub> = " + x2 + ".<br>"
+  }
+  else{
+  v.innerHTML+="This quadratic equation hasn't any roots((<br>"
+  }
+  v.innerHTML+="Created by Zitro=D!<br>"
 }
-document.getElementById("wrapper").innerHTML+=targetnew;
-  alert(targetnew)
+  var target="1, 2, 3";
+function showHintById(target, text, cot, bgc){
+	var DoTTargeT=document.getElementById(target);
+	alert(DoTTargeT)
+}
+
 </script>
 <div id="wrapper">
-<button onclick=showHint(1115)>
+<button onclick=showHintById(1115)>
 <img src="https://jsfiddle.net/img/logo.png">
 </button>
 </div>
